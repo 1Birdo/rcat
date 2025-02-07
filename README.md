@@ -13,12 +13,13 @@ Features:
 - Graceful Ctrl+C handling
  ```
 Installation:
+ ```
 1. Install Rust: https://rustup.rs/
 2. Build from source:
    git clone https://github.com/Birdo1221/rncat
    cd rncat
    cargo install --path .
-
+ ```
 Basic Usage:
    ```bash
    TCP Server:    rncat -l -p 8080
