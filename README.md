@@ -23,7 +23,7 @@ Ensure you have Rust installed:
 ### Build from Source
 ```sh
 # Clone the repository
-git clone https://github.com/Birdo1221/rncat
+📌 git clone https://github.com/Birdo1221/rncat
 cd rncat
 
 # Install rncat globally
@@ -106,3 +106,4 @@ This project is licensed under the **MIT License**.
 - **Original Netcat** by Hobbit
 - **Nmap Project’s Ncat**
 - **Tokio & Rustls maintainers**
+
