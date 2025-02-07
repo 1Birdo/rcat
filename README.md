@@ -31,6 +31,7 @@ Basic Usage:
    HTTP Proxy:    rncat --proxy http://proxy:8080 example.com 80
    ```
 Command Options:
+ ```
 -l/--listen  - Server mode
 -p PORT      - Port number
 --udp        - Use UDP
@@ -38,21 +39,25 @@ Command Options:
 --proxy URL  - Proxy address
 -v           - Verbose output
 -h           - Show help
-
+ ```
 Security Notes:
+ ```
 - Always use --ssl for sensitive data
 - Verify certificates in production
 - Prefer SOCKS5 over HTTP proxies
 - Avoid running as root
-
+ ```
 Development:
+ ```
 Build: cargo build --release
 Test: cargo test -- --test-threads=1
 Contribute: Fork repo → Create branch → PR
-
+ ```
 License: MIT
 
 Acknowledgments:
+ ```
 - Original Netcat by Hobbit
 - Nmap Project's Ncat
 - Tokio & Rustls maintainers
+ ```
