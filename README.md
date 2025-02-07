@@ -1,10 +1,10 @@
-# rncat 🚀
+# rcat 🚀
 
-A modern, memory-safe Netcat alternative written in Rust, featuring TLS encryption and proxy support.
+A modern, memory-safe Netcat altercative written in Rust, featuring TLS encryption and proxy support.
 
 ## 📖 Overview
 
-rncat reimagines the classic Netcat tool with modern features and robust security. Built with Rust's safety guarantees and async runtime, it provides a reliable solution for network operations, debugging, and data transfer.
+rcat reimagines the classic Netcat tool with modern features and robust security. Built with Rust's safety guarantees and async runtime, it provides a reliable solution for network operations, debugging, and data transfer.
 
 ## ✨ Key Features
 
@@ -30,8 +30,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Build and install from source:
 
 ```sh
-git clone https://github.com/Birdo1221/rncat
-cd rncat
+git clone https://github.com/Birdo1221/rcat
+cd rcat
 cargo install --path .
 ```
 
@@ -40,56 +40,56 @@ cargo install --path .
 **🔷 TCP Operations:**
 ```sh
 # Start TCP server
-rncat -l -p 8080
+rcat -l -p 8080
 
 # Connect to server
-rncat example.com 8080
+rcat example.com 8080
 
 # Transfer file
-rncat -l -p 8080 > received_file
-cat file_to_send | rncat example.com 8080
+rcat -l -p 8080 > received_file
+cat file_to_send | rcat example.com 8080
 ```
 
 **🔶 UDP Operations:**
 ```sh
 # Start UDP server
-rncat -l -p 9000 --udp
+rcat -l -p 9000 --udp
 
 # Send UDP datagram
-echo "Hello" | rncat --udp localhost 9000
+echo "Hello" | rcat --udp localhost 9000
 ```
 
 **🔐 Secure Communications:**
 ```sh
 # TLS server
-rncat -l -p 443 --ssl --cert cert.pem --key key.pem
+rcat -l -p 443 --ssl --cert cert.pem --key key.pem
 
 # TLS client
-rncat --ssl example.com 443
+rcat --ssl example.com 443
 ```
 
 **🌍 Proxy Usage:**
 ```sh
 # Connect through SOCKS5
-rncat --proxy socks5://proxy:1080 example.com 80
+rcat --proxy socks5://proxy:1080 example.com 80
 
 # Connect through HTTP proxy
-rncat --proxy http://proxy:8080 example.com 80
+rcat --proxy http://proxy:8080 example.com 80
 ```
 
 ## ⚙️ Command Line Reference
 
 | Option | Description | Example |
 |--------|-------------|---------|
-| `-l, --listen` | Start server mode | `rncat -l -p 8080` |
-| `-p, --port PORT` | Specify port number | `rncat -p 8080` |
-| `--udp` | Use UDP instead of TCP | `rncat --udp` |
-| `--ssl` | Enable TLS encryption | `rncat --ssl` |
-| `--cert FILE` | Specify TLS certificate | `rncat --ssl --cert cert.pem` |
-| `--key FILE` | Specify TLS private key | `rncat --ssl --key key.pem` |
-| `--proxy URL` | Use proxy server | `rncat --proxy socks5://proxy:1080` |
-| `-v, --verbose` | Enable detailed logging | `rncat -v` |
-| `-h, --help` | Show help message | `rncat --help` |
+| `-l, --listen` | Start server mode | `rcat -l -p 8080` |
+| `-p, --port PORT` | Specify port number | `rcat -p 8080` |
+| `--udp` | Use UDP instead of TCP | `rcat --udp` |
+| `--ssl` | Enable TLS encryption | `rcat --ssl` |
+| `--cert FILE` | Specify TLS certificate | `rcat --ssl --cert cert.pem` |
+| `--key FILE` | Specify TLS private key | `rcat --ssl --key key.pem` |
+| `--proxy URL` | Use proxy server | `rcat --proxy socks5://proxy:1080` |
+| `-v, --verbose` | Enable detailed logging | `rcat -v` |
+| `-h, --help` | Show help message | `rcat --help` |
 
 ## 🔒 Security Best Practices
 
