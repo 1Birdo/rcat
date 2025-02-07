@@ -3,6 +3,7 @@
 A modern, memory-safe netcat implementation with TLS/proxy support.
 
 Features:
+ ```
 - TCP/UDP client/server
 - Async I/O (Tokio)
 - TLS encryption (Rustls)
@@ -10,7 +11,7 @@ Features:
 - Cross-platform (Windows/Linux/macOS)
 - Zero-copy data transfer
 - Graceful Ctrl+C handling
-
+ ```
 Installation:
 1. Install Rust: https://rustup.rs/
 2. Build from source:
@@ -19,15 +20,16 @@ Installation:
    cargo install --path .
 
 Basic Usage:
-TCP Server:    rncat -l -p 8080
-TCP Client:    rncat example.com 8080
-UDP Server:    rncat -l -p 9000 --udp
-UDP Client:    echo "Hello" | rncat --udp localhost 9000
-TLS Server:    rncat -l -p 443 --ssl
-TLS Client:    rncat --ssl example.com 443
-SOCKS5 Proxy:  rncat --proxy socks5://proxy:1080 example.com 80
-HTTP Proxy:    rncat --proxy http://proxy:8080 example.com 80
-
+   ```bash
+   TCP Server:    rncat -l -p 8080
+   TCP Client:    rncat example.com 8080
+   UDP Server:    rncat -l -p 9000 --udp
+   UDP Client:    echo "Hello" | rncat --udp localhost 9000
+   TLS Server:    rncat -l -p 443 --ssl
+   TLS Client:    rncat --ssl example.com 443
+   SOCKS5 Proxy:  rncat --proxy socks5://proxy:1080 example.com 80
+   HTTP Proxy:    rncat --proxy http://proxy:8080 example.com 80
+   ```
 Command Options:
 -l/--listen  - Server mode
 -p PORT      - Port number
