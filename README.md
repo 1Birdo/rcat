@@ -20,10 +20,10 @@ Ensure you have Rust installed:
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   ```
 
-### Build from Source
+###📌 Build from Source
 ```sh
 # Clone the repository
-📌 git clone https://github.com/Birdo1221/rncat
+ git clone https://github.com/Birdo1221/rncat
 cd rncat
 
 # Install rncat globally
