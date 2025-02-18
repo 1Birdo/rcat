@@ -1,6 +1,6 @@
 # rcat 🚀
 
-If u would like to help by either Forking the repo or by recommending improvements
+If you'd like to contribute, you can either fork the repo or suggest improvements.
 ## Currently in Dev 🚧
 
 A modern, memory-safe Netcat altercative written in Rust, featuring TLS encryption and proxy support.
