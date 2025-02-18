@@ -164,6 +164,12 @@ async fn main() {
             .help("Enable TLS encryption"))
         .get_matches();
 
+    // Check if no arguments were provided for TCP or UDP
+    if !matches.is_present("tcp") && !matches.is_present("udp") {
+        eprintln!("No action specified! Please provide either --tcp or --udp.");
+        std::process::exit(1);
+    }
+
     let port = matches.value_of_t("port").unwrap_or(8080);
     let use_tls = matches.is_present("tls");
 
