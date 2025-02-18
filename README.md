@@ -113,23 +113,6 @@ rcat --proxy http://proxy:8080 example.com 80
 | `-v, --verbose` | Enable detailed logging | `rcat -v` |
 | `-h, --help` | Show help message | `rcat --help` |
 
-## 🔒 Security Best Practices
-
-1. **🛡️ TLS Usage:**
-   - Always use `--ssl` when transmitting sensitive data
-   - Verify certificate validity in production environments
-   - Keep TLS certificates and private keys secure
-
-2. **🌐 Proxy Configuration:**
-   - Prefer SOCKS5 over HTTP proxies for enhanced security
-   - Verify proxy server trustworthiness
-   - Use encrypted proxy connections when possible
-
-3. **🚨 General Security:**
-   - Avoid running with root/administrator privileges
-   - Use firewall rules to restrict access when running servers
-   - Monitor connections in verbose mode when debugging
-
 ## ⚡ Performance Considerations
 
 - Zero-copy data transfer minimizes memory usage
