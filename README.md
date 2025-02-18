@@ -37,6 +37,19 @@ git clone https://github.com/Birdo1221/rcat
 cd rcat
 cargo install --path .
 ```
+Compiling for Linux and Windows (Cross-Platform)
+```sh
+
+  Linux Build 
+cargo build --release
+
+  Cross-Compiling - Linux and Windows
+cargo build --target=x86_64-unknown-linux-gnu
+
+  Windows Build
+rustup target add x86_64-pc-windows-gnu
+cargo build --target=x86_64-pc-windows-gnu
+```
 
 ### 📝 Common Usage Examples
 
@@ -70,6 +83,12 @@ rcat -l -p 443 --ssl --cert cert.pem --key key.pem
 # TLS client
 rcat --ssl example.com 443
 ```
+
+**🧑‍💻 MitM (Man-In-The-Middle) Proxy:**
+```sh
+rcat -l -p 8080 --mitm example.com
+```
+
 
 **🌍 Proxy Usage:**
 ```sh
@@ -111,39 +130,6 @@ rcat --proxy http://proxy:8080 example.com 80
    - Use firewall rules to restrict access when running servers
    - Monitor connections in verbose mode when debugging
 
-## 👨‍💻 Development
-
-### 🛠️ Building and Testing
-
-```sh
-# Development build
-cargo build
-
-# Optimized release build
-cargo build --release
-
-# Run test suite
-cargo test -- --test-threads=1
-
-# Run with logging
-RUST_LOG=debug cargo run
-```
-
-### 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### 📊 Code Quality
-
-- All code must pass `cargo clippy` without warnings
-- Format code using `cargo fmt`
-- Maintain test coverage for new features
-- Follow Rust best practices and idioms
-
 ## ⚡ Performance Considerations
 
 - Zero-copy data transfer minimizes memory usage
@@ -156,13 +142,11 @@ RUST_LOG=debug cargo run
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
-
 - Original Netcat tool by Hobbit
 - Nmap Project's Ncat implementation
 - Tokio async runtime maintainers
 - Rustls TLS library contributors
-- The Rust community for excellent crates and tools
-
+- The Rust community for crates and tools
 ---
 
 *For bug reports and feature requests, please open an issue on GitHub.* 🐛
