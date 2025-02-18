@@ -1,0 +1,12 @@
+[package]
+name = "rcat"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+mio = "0.8"
+rustls = "0.21"
+rustls-pemfile = "1.0"
+tokio = { version = "1", features = ["full"] }
+tokio-socks = "0.5"
+clap = "3.0"
