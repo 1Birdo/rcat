@@ -6,6 +6,8 @@
 
 A high-performance, memory-safe network utility written in Rust, combining the simplicity of classic Netcat with modern security features.
 
+A background Development
+
 ## 📦 Features
 
 ### 🔒 Security
