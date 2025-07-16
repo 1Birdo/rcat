@@ -122,4 +122,3 @@ Option	Description
 -v, --verbose	Verbose output
 --hexdump	Show hex dump
 -h, --help	Show help
-|------------------------------|
